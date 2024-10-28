@@ -1773,8 +1773,8 @@ then
 		AC_MSG_RESULT([$PYTHON_VER])
 
 		AC_MSG_CHECKING([for python distutils])
-		python_result="`$PYTHON -c 'import distutils;' 2>&1`"
-		if test -z "$python_result" ; then
+		python_result="`$PYTHON -c 'import distutils;' > /dev/null 2>&1; $?`"
+        	if test "$python_result" -eq 0 ; then 
 			python_has_distutils="yes"
 		else
 			python_has_distutils="no"
@@ -1894,8 +1894,8 @@ then
 		AC_MSG_RESULT([$PYTHON3_VER])
 
 		AC_MSG_CHECKING([for python3 distutils])
-		python3_result="`$PYTHON3 -c 'import distutils;' 2>&1`"
-		if test -z "$python3_result" ; then
+		python3_result="`$PYTHON3 -c 'import distutils;' > /dev/null 2>&1; $?`"
+        	if test "$python3_result" -eq 0 ; then 
 			python3_has_distutils="yes"
 		else
 			python3_has_distutils="no"
