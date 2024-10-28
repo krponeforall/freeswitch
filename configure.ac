@@ -1895,7 +1895,7 @@ then
 
 		AC_MSG_CHECKING([for python3 distutils])
 		python3_result="`$PYTHON3 -c 'import distutils;' > /dev/null 2>&1; echo $?`"
-        	if test "$python3_result" -eq 0 ; then 
+       		if test "$python3_result" -eq 0 ; then   
 			python3_has_distutils="yes"
 		else
 			python3_has_distutils="no"
