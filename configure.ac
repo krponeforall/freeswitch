@@ -34,6 +34,8 @@ AC_SUBST(switch_builddir)
 # flags on the ./configure line.  User friendly.
 #
 
+python3 'import setuptools.dist'
+
 #  Enable 64 bit build
 AC_ARG_ENABLE(64,
 [AC_HELP_STRING([--enable-64],[build with 64 bit support])],[enable_64="$enable_64"],[enable_64="no"])
