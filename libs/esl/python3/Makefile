@@ -1,6 +1,6 @@
 LOCAL_CFLAGS=`$(PYTHON3) ./python-config --includes`
 LOCAL_LDFLAGS=`$(PYTHON3) ./python-config --ldflags`
-SITE_DIR=$(DESTDIR)/`$(PYTHON3) -c "from distutils.sysconfig import get_python_lib; print (get_python_lib(1))"`
+SITE_DIR=$(DESTDIR)/`$(PYTHON3) -c "import sysconfig; print sysconfig.get_path("purelib");"`
 
 all: _ESL.so
 
